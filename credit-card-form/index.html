@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/global.css" />
+    <link rel="stylesheet" type="text/css" href="./css/form.css" />
+
+    <title>Formulário de Cartão de Crédito</title>
+  </head>
+  <body>
+    <form>
+      <section id="credit-card">
+        <div class="front"></div>
+        <div class="back"></div>
+      </section>
+
+      <section class="inputs flex">
+        <div class="input-wrapper">
+          <label for="cc-number">Número do cartão</label>
+          <input
+            type="text"
+            required
+            id="cc-number"
+            placeholder="**** **** **** ****"
+          />
+          <div class="warning">
+            <img src="./assets/Warning.svg" alt="ícone de alerta" />
+            Número do cartão é obrigatório
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="cc-holder">Nome do titular</label>
+          <input
+            type="text"
+            id="cc-holder"
+            required
+            placeholder="Nome como está no cartão"
+          />
+          <div class="warning">
+            <img src="./assets/Warning.svg" alt="ícone de alerta" />
+            Nome do titular é obrigatório
+          </div>
+        </div>
+
+        <div class="col-2 flex">
+          <div class="input-wrapper">
+            <label for="cc-validity">Validade</label>
+            <input type="text" required id="cc-validity" placeholder="mm/aa" />
+            <div class="warning">
+              <img src="./assets/Warning.svg" alt="ícone de alerta" />
+              Validade mês e ano é obrigatório
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label for="cc-cvv" class="flex help"
+              >CVV
+              <img
+                src="./assets/Question.svg"
+                alt="icone de ajuda"
+                title="Este número está, geralmente nas costas do seu cartão"
+              />
+            </label>
+            <input type="text" required id="cc-cvv" placeholder="***" />
+            <div class="warning">
+              <img src="./assets/Warning.svg" alt="ícone de alerta" />
+              CVV é obrigatório
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="info-security flex">
+          <img src="./assets/ShieldCheck.svg" alt="icone de segurança" />
+          Seus dados estão seguros
+        </div>
+      </section>
+
+      <button type="submit">Adicionar Cartão</button>
+    </form>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
